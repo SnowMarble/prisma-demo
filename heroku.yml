@@ -5,5 +5,5 @@ run:
   web: npm run start
 release:
   image: web
-  commang:
+  command:
     - npm run start
