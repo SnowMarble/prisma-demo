@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - '/app/node_modules'
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=prisma_demo
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=greenlight5566**
+      - MYSQL_ROOT_PASSWORD=greenlight5566**
