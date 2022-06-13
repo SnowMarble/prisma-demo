@@ -1,9 +1,0 @@
-{
-  "extends": "@tsconfig/node16-strictest/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": "src",
-    "typeRoots": ["src/types"]
-  },
-  "ts-node": { "files": true }
-}
