@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "rm -rf dist && tsc -p .",
-    "start": "npm run build && prisma migrate deploy && node dist/server.js"
+    "start": "rm -rf dist && tsc -p . && prisma migrate deploy && node dist/server.js"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "^1.0.1",
