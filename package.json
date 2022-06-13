@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "start": "NODE_PATH=./dist && node dist/server.js",
     "build": "rm -rf dist && tsc -p .",
-    "deploy": "npm start build && prisma migrate deploy && npm run start"
+    "start": "npm start build && prisma migrate deploy && node dist/server.js"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "^1.0.1",
