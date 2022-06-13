@@ -3,6 +3,7 @@ import { PrismaClient } from '@prisma/client';
 
 const app = express();
 const prisma = new PrismaClient();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -49,6 +50,4 @@ app.get(
   }
 );
 
-app.listen(process.env['PORT'] || 3000, () =>
-  console.log("server's listening on port 3000")
-);
+app.listen(PORT, () => console.log(`server's listening on port ${PORT}`));
